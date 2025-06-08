@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7818cd3c-ea71-4f1b-af1d-beff5c6ba723" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/shop/static/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/templates/parent/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/templates/partials/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/templates/partials/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/templates/partials/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/templates/shop/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/templates/shop/list.html" afterDir="false" />
-    </list>
+    <list default="true" id="7818cd3c-ea71-4f1b-af1d-beff5c6ba723" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1749316445895</updated>
       <workItem from="1749316449637" duration="5079000" />
-      <workItem from="1749361147922" duration="437000" />
+      <workItem from="1749361147922" duration="1481000" />
     </task>
     <servers />
   </component>
