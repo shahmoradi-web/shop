@@ -1,0 +1,11 @@
+
+
+<div>
+    {% with item_count=cart|length %}
+        <a href="#">
+            <div>
+                <span style="color: blue" id="item_count">{{ item_count }}item</span><span style="color: blue" id="total_price">{{ cart.get_total_price }}toman</span>
+            </div>
+        </a>
+    {% endwith %}
+</div>
