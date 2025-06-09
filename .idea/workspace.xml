@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7818cd3c-ea71-4f1b-af1d-beff5c6ba723" name="Changes" comment="" />
+    <list default="true" id="7818cd3c-ea71-4f1b-af1d-beff5c6ba723" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cart/cart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApps_Shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyApps_Shop/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -40,7 +45,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/hp/Desktop/MyApps_Shop/shop/templates/parent",
+    "last_opened_file_path": "C:/Users/hp/Desktop/MyApps_Shop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,7 +102,8 @@
       <option name="presentableId" value="Default" />
       <updated>1749316445895</updated>
       <workItem from="1749316449637" duration="5079000" />
-      <workItem from="1749361147922" duration="1481000" />
+      <workItem from="1749361147922" duration="2296000" />
+      <workItem from="1749491533169" duration="488000" />
     </task>
     <servers />
   </component>
