@@ -25,6 +25,7 @@
         <br>
         <button type="submit" id="add-cart">Add to cart</button>
         </div>
+    <button type="button" id="add-cart">Add to Cart</button>
         <div class="product-images">
             {% for img in product.images.all %}
                 <img src="{{ img.file.url }}">
@@ -34,6 +35,27 @@
             <h3>توضیحات محصول:</h3>
             <p>{{ product.description }}</p>
         </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $('#add-cart').click(function(){
+            var button = $(this);
+
+            $.ajax({
+               type: 'POST',
+               url: '{% url 'cart:add_to_cart' product.id %}',
+               data:{
+                   'csrfmiddlewaretoken':'{{ csrf_token }}',
+               },
+               success: function(data) {
+                   $('#item_count').text(data.item_count);
+                   $('#total_price').text(data.total_price);
+               },
+            });
+        });
+    });
+</script>
 
     </div>
 {% endblock %}
