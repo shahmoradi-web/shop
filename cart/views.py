@@ -21,3 +21,8 @@ def add_to_cart(request, product_id):
         return JsonResponse(context)
     except:
         return JsonResponse({'error':'Something went wrong'})
+
+
+def detail_cart(request):
+    cart = Cart(request)
+    return render(request, 'cart/detail.html', {'cart':cart})
