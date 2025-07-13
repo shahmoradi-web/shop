@@ -1,16 +1,29 @@
 from django.contrib import admin
-from .models import OrderItem,Orders
+from django.contrib.auth.admin import UserAdmin
+
+from account.forms import ShopUserCreationForm, ShopUserChangeForm
+from account.models import ShopUser
+
+
+
 # Register your models here.
-class OrderItemInline(admin.TabularInline):
-    model = OrderItem
-    extra = 0
-    raw_id_fields= ['product']
 
-@admin.register(Orders)
-class OrdersAdmin(admin.ModelAdmin):
-    list_display = ['id','first_name', 'last_name','address', 'city', 'postal_code',
-                    'phone', 'province', 'created', 'updated', 'paid', 'status']
-    list_filter = ['paid', 'created', 'updated']
-    list_editable = ['status']
-    inlines = [OrderItemInline]
-
+@admin.register(ShopUser)
+class ShopUserAdmin(admin.ModelAdmin):
+    ordering = ['phone']
+    add_form = ShopUserCreationForm
+    form = ShopUserChangeForm
+    model = ShopUser
+    list_display = ['phone', 'first_name', 'last_name', 'is_active', 'is_staff']
+    fieldsets = (
+        (None,{'fields': ('phone','password')}),
+        ('Personal Info', {'fields': ('first_name', 'last_name', 'address')}),
+        ('Permission', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+        ('Important Dates', {'fields': ('last_login', 'date_joined')}),
+    )
+    add_fieldsets = (
+        (None, {'fields': ('phone', 'password1', 'password2')}),
+        ('Personal Info', {'fields': ('first_name', 'last_name', 'address')}),
+        ('Permission', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+        ('Important Dates', {'fields': ('last_login', 'date_joined')}),
+    )
