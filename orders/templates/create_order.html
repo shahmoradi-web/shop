@@ -1,0 +1,42 @@
+<h2>محصولات انتخاب شده:</h2>
+
+<ul>
+    {% for item in cart %}
+        <li>
+            {{ item.quantity }} X {{ item.product.name }}
+            {{ item.total}}
+
+        </li>
+    {% endfor %}
+</ul>
+
+<h2>اطلاعات خرید را تکمیل کنید</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="first_name" placeholder="نام" {% if request.user.first_name %}value="{{request.user.first_name }}" {% endif %}>
+    <br>
+    <br>
+    <input type="text" name="last_name" placeholder="نام خانوادگی" {% if request.user.last_name %}value="{{request.user.last_name }}" {% endif %}>
+    <br>
+    <br>
+    <input type="text" name="phone" placeholder="تلفن" {% if request.user.phone %}value="{{request.user.phone }}" {% endif %}>
+    <br>
+    <br>
+    <input type="text" name="address" placeholder="آدرس" {% if request.user.address %}value="{{request.user.address }}" {% endif %}>
+    <br>
+    <br>
+    <input type="text" name="city" placeholder="شهر">
+    <br>
+    <br>
+    <input type="text" name="province" placeholder="شهرستان">
+    <br>
+    <br>
+    <input type="text" name="postal_code" placeholder="کد پستی">
+    <br>
+    <br>
+    <input type="submit" value="تایید سفارش" placeholder="">
+
+</form>
+
+{#<a href="{% url 'orders:new_address' %}">تغییر آدرس</a>#}

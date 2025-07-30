@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7818cd3c-ea71-4f1b-af1d-beff5c6ba723" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cart/common/KaveSms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/templates/verify_code.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/templates/verify_phone.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/templates/create_order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyApps_Shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyApps_Shop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/templates/cart/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart/templates/cart/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +139,7 @@
       <workItem from="1752217571166" duration="1981000" />
       <workItem from="1752392159782" duration="614000" />
       <workItem from="1753556047479" duration="836000" />
-      <workItem from="1753893478280" duration="1799000" />
+      <workItem from="1753893478280" duration="2887000" />
     </task>
     <servers />
   </component>

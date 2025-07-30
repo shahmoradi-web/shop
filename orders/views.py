@@ -2,10 +2,13 @@ import random
 
 from django.contrib import messages
 from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from account.models import ShopUser
-from orders.forms import PhoneVerificationForm
+from cart.cart import Cart
+from orders.forms import PhoneVerificationForm, OrderCreateForm
+from orders.models import OrderItem
 
 
 # Create your views here.
@@ -54,3 +57,25 @@ def verify_code(request):
             else:
                 messages.error(request, 'Verification code is incorrect.')
     return render(request, 'verify_code.html')
+
+
+@login_required
+def create_order(request):
+    cart = Cart(request)
+    if request.method == 'POST':
+        form = OrderCreateForm(request.POST)
+        if form.is_valid():
+            order = form.save()
+            # order.buyer = request.user
+            # order.save()
+            for item in cart:
+                OrderItem.objects.create(order=order, product=item['product'],
+                                             price=item['price'], quantity=item['quantity'],
+                                             weight=item['weight'])
+            cart.clear()
+            # request.session['order_id'] = order.id
+            return redirect('orders:request')
+    else:
+        form = OrderCreateForm(current_user=request.user)
+    return render(request, 'create_order.html', {'form': form, 'cart': cart})
+
