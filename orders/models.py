@@ -4,12 +4,14 @@ from django.db import models
 
 from django.db import models
 
+from account.models import ShopUser
 from shop.models import Product
 
 
 # Create your models here.
 
 class Orders(models.Model):
+    buyer = models.ForeignKey(ShopUser, on_delete=models.SET_NULL, related_name='orders', null=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     address = models.CharField(max_length=250)

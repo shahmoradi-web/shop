@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7818cd3c-ea71-4f1b-af1d-beff5c6ba723" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/orders/templates/create_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/migrations/0002_orders_buyer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApps_Shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyApps_Shop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orders/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
     </list>
@@ -46,7 +48,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/hp/Desktop/MyApps_Shop/orders/templates",
+    "last_opened_file_path": "C:/Users/hp/Desktop/MyApps_Shop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -139,7 +141,8 @@
       <workItem from="1752217571166" duration="1981000" />
       <workItem from="1752392159782" duration="614000" />
       <workItem from="1753556047479" duration="836000" />
-      <workItem from="1753893478280" duration="2887000" />
+      <workItem from="1753893478280" duration="4909000" />
+      <workItem from="1754409352354" duration="3330000" />
     </task>
     <servers />
   </component>
