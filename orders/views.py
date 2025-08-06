@@ -164,3 +164,26 @@ def verify(request):
         return HttpResponse('Timeout Error')
     except requests.exceptions.ConnectionError:
         return HttpResponse('Connection Error')
+
+
+
+@login_required
+def orders_list(request):
+    try:
+        user = request.user
+        orders = Orders.objects.filter(buyer=user)
+        return render(request, 'orders-list.html', {'orders': orders})
+    except:
+        return render(request, 'orders-list.html', )
+
+
+@login_required
+def order_detail(request, id):
+   order = Orders.objects.get(id=id)
+   if order.buyer == request.user:
+      context = {
+          'order': order,
+      }
+      return render(request, 'order-detail.html', context)
+   else:
+    raise Http404

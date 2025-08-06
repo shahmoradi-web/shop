@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %}جزئیات سفارش{% endblock %}
+
+{% block content %}
+		<div class="body">
+
+			<div role="main" class="main">
+
+				<section class="page-header page-header-modern page-header-background page-header-background-sm overlay overlay-color-primary overlay-show overlay-op-8 mb-5" style="background-image: url(img/page-header/page-header-elements.jpg);">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+								<h1 class="mb-n2">جزئیات تراکنش</h1>
+							</div>
+							<div class="col-md-12 align-self-center order-1">
+								<ul class="breadcrumb breadcrumb-light d-block text-center">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+                 <div class="img-fluid mx-5">
+                 {% for item in order.items.all %}
+                    {% for product in item.product.images.all %}
+                        <a class="d-inline-block" href="{{ order.items.first.product.get_absolute_url }}"><img src="{{ product.file.url }}" width="400" height="420" alt="product picture"></a>
+                    {% endfor %}
+                 {% endfor %}
+{#                    <a class="d-inline-block" href="{{ order.items.first.product.get_absolute_url }}"><img src="{{ order.items.first.product.images.first.file.url }}" width="400" height="420" alt="product picture"></a>#}
+
+                    <div class="d-inline-block mx-5">
+                        <ul class="list list-icons">
+                            {% for item in order.items.all %}
+                            <li><i class="fas fa-check"></i>نام محصول:  {{ item.product.name }}</li>
+                            <li><i class="fas fa-arrow-alt-circle-left"></i>تعداد:  {{ item.quantity }}</li>
+                            <li><i class="fas fa-money-bill-wave"></i>قیمت:  {{ item.price }}</li>
+                            {% endfor %}
+                            <li><i class="fa fa-history"></i>تاریخ ایجاد:  {{ order.created }}</li>
+                            <li><i class="fa fa-list"></i>استان:  {{ order.province }}</li>
+                            <li><i class="fa fa-city"></i>شهر:  {{ order.city }}</li>
+                            <li><i class="far fa-address-card"></i>آدرس:  {{ order.address }}</li>
+                        {% if order.paid %}
+                            <li><i class="far fa-address-card"></i>وضعیت:  <i class="fa fa-check text-success"></i></li>
+                        {% else %}
+                            <li><i class="fa fa-key"></i>وضعیت:  <i class="fa fa-stop-circle text-danger"></i></li>
+                        {% endif %}
+                        </ul>
+                    </div>
+                </div>
+
+
+
+				<div class="container py-2">
+
+					<div class="row">
+						<div class="col">
+
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+{% endblock %}
+</html>
